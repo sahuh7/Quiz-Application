@@ -21,8 +21,8 @@ public class DBConnection {
     static{        
         try{
             Class.forName("oracle.jdbc.OracleDriver");			
-            JOptionPane.showMessageDialog(null, "Connected Successfully!!", "Success", JOptionPane.INFORMATION_MESSAGE);
             conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/XE","project","java");
+            JOptionPane.showMessageDialog(null, "Connected Successfully!!", "Success", JOptionPane.INFORMATION_MESSAGE);
         } catch(ClassNotFoundException | SQLException ex){
             System.out.println("Error : "+ex);
             JOptionPane.showMessageDialog(null, "Error : "+ex, "Error", JOptionPane.ERROR_MESSAGE);
